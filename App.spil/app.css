@@ -1,3 +1,6 @@
+/* Import af sansita skrifttype fra Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap");
+
 /* =====================
    DARK MODE CSS VARIABLES
    ===================== */
@@ -62,11 +65,17 @@ header {
   height: 16vh;
 }
 
-#sted-knap {
+#lokation {
   display: flex;
   align-items: center;
+  width: fit-content;
   background-color: var(--bg);
   color: var(--text);
+  border: var(--bg);
+  font-size: x-large;
+  font-family: "Sansita", sans-serif;
+  font-weight: 800;
+  font-style: italic;
 }
 
 /* =====================
@@ -135,6 +144,16 @@ main {
   transition: var(--transition);
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card2-info {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.atributterCard2 {
+  display: flex;
+  justify-content: space-between;
 }
 
 .game-cover {
