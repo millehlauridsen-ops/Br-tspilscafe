@@ -1,0 +1,101 @@
+:root {
+  --bg: #191919;
+  --card: #464646;
+  --border: #414040;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Sansita One", sans-serif;
+  background: var(--bg);
+  color: var(--white);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 24px;
+}
+
+.phone-frame {
+  width: 390px; /* iPhone 13/14 width */
+  height: 844px; /* artboard height */
+  position: relative;
+  background: var(--bg);
+}
+
+.logo {
+  position: absolute;
+  left: 67px;
+  top: 91px;
+  width: 255px;
+  height: 193px;
+  object-fit: cover;
+}
+
+.title {
+  position: absolute;
+  left: 67px;
+  top: 305px;
+  font-size: 48px;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.option {
+  position: absolute;
+  left: 41px;
+  width: 308px;
+  height: 52px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding-left: 32px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.option[data-value="aarhus-vestergade"] {
+  top: 394px;
+}
+.option[data-value="aarhus-fredensgade"] {
+  top: 467px;
+}
+.option[data-value="kolding"] {
+  top: 540px;
+}
+.option[data-value="odense"] {
+  top: 613px;
+}
+.option[data-value="aalborg"] {
+  top: 686px;
+}
+
+.option:hover {
+  filter: brightness(1.06);
+}
+.option.selected {
+  outline: 3px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* small responsive tweak */
+@media (max-width: 420px) {
+  .phone-frame {
+    transform: scale(0.95);
+  }
+}
