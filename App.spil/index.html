@@ -52,25 +52,18 @@
     </header>
 
     <main>
-      <section id="valgte-filtre">
-        <span id="alle-filter"
-          ><p>Alle</p>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="24px"
-            viewBox="0 -960 960 960"
-            width="24px"
-            fill="#e3e3e3"
-          >
-            <path
-              d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-            />
-          </svg>
-        </span>
-      </section>
-
       <section id="filter-bar">
-        <select id="filtre-select">
+        <!-- Søg -->
+        <section id="search-bar">
+          <!-- Øverste række: Søg -->
+          <div class="filter-row-main">
+            <div class="search">
+              <label for="search-input"></label>
+              <input type="text" id="search-input" placeholder="Søg..." />
+            </div>
+          </div>
+        </section>
+        <select id="genre-select">
           <option value="all">Filter</option>
           <!-- Genre options will be populated from JS -->
         </select>
@@ -85,6 +78,18 @@
 
       <div id="game-list"></div>
     </main>
+
+    <footer></footer>
+
+    <!-- Games Detail Modal -->
+    <dialog id="game-dialog">
+      <form method="dialog">
+        <button id="close-dialog" aria-label="Close">✕</button>
+        <div id="dialog-content">
+          <!-- Game details will be injected here via JavaScript -->
+        </div>
+      </form>
+    </dialog>
 
     <script src="app.js"></script>
   </body>
